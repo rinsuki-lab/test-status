@@ -1,0 +1,13 @@
+name: Test
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: Ubuntu-24.04
+    steps:
+    - run: |
+        for i in {1..10}; do
+          time curl -v https://rinsuki.net
+        done
